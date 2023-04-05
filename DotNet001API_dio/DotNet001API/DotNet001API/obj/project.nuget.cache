@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qixazmZeqpyD43l4IpU8bBPq+RYTdYJ+ZBOv43XlLtfdJkzZ1++vF9VyUr0LIfCQ8cI/2GJzrQp0zXXhMbK9qA==",
+  "dgSpecHash": "Vcstx2p8Psd58b50oaNzDxG0afAKx8EV6vFwd5qu++B1PFyxMB/bKCBF1D8iEzoeuuW013RWE0HguopLfFifng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001API\\DotNet001API.csproj",
+  "projectFilePath": "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001API\\DotNet001API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DiogoRodrigues\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DiogoRodrigues\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

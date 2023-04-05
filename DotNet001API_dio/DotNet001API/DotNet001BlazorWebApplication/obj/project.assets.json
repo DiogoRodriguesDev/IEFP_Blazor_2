@@ -3503,11 +3503,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001BlazorWebApplication\\DotNet001BlazorWebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001BlazorWebApplication\\DotNet001BlazorWebApplication.csproj",
       "projectName": "DotNet001BlazorWebApplication",
-      "projectPath": "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001BlazorWebApplication\\DotNet001BlazorWebApplication.csproj",
+      "projectPath": "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001BlazorWebApplication\\DotNet001BlazorWebApplication.csproj",
       "packagesPath": "C:\\Users\\DiogoRodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001BlazorWebApplication\\obj\\",
+      "outputPath": "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001BlazorWebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
@@ -3532,11 +3532,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001API\\DotNet001API.csproj": {
-              "projectPath": "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001API\\DotNet001API.csproj"
+            "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001API\\DotNet001API.csproj": {
+              "projectPath": "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001API\\DotNet001API.csproj"
             },
-            "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001Shared\\DotNet001Shared.csproj": {
-              "projectPath": "C:\\Users\\DiogoRodrigues\\Desktop\\DotNet001API (2)\\DotNet001API\\DotNet001Shared\\DotNet001Shared.csproj"
+            "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001Shared\\DotNet001Shared.csproj": {
+              "projectPath": "C:\\Users\\DiogoRodrigues\\Desktop\\IEFP\\git_Repositorio\\IEFP_Blazor_2\\DotNet001API_dio\\DotNet001API\\DotNet001Shared\\DotNet001Shared.csproj"
             }
           }
         }
