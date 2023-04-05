@@ -53,12 +53,36 @@
         }
     }
 
-    private async Task UpdateProduct()
+    //private async Task UpdateProduct()
+    //{
+    //    try
+    //    {
+    //        await WebServiceAPI.UpdateProduct(Id, ProductData);
+    //        NavigationManager.NavigateTo("/Produtos");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Debug.WriteLine(ex);
+    //        throw;
+    //    }
+    //}
+
+
+    public async void UpdateProduct()
     {
         try
         {
-            await WebServiceAPI.UpdateProduct(Id, ProductData);
-            NavigationManager.NavigateTo("/Produtos");
+            var newProduct = new Product
+                {
+                    Name = ProductData.Name,
+                    Description = ProductData.Description,
+                    Category = ProductData.Category,
+                    Price = ProductData.Price,
+                    IsDeleted = ProductData.IsDeleted
+                };
+
+            var response = await WebServiceAPI.UpdateProduct(Convert.ToInt32(Id), newProduct);
+
         }
         catch (Exception ex)
         {
@@ -66,4 +90,5 @@
             throw;
         }
     }
+
 }

@@ -59,7 +59,7 @@ namespace DotNet001API.Controllers
              await Mediator.Send(new DeleteProductCommand(id));
             return Ok();
         }
-        [HttpPut("products/{id}")]
+        [HttpPut("product-edit/{id}")]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product, int id)
         {
             await Mediator.Send(new UpdateProductCommand(product, id));

@@ -15,7 +15,7 @@ namespace DotNet001BlazorWebApplication.Interfaces
         [Post("/products")]
         public Task<Product> CreateProduct([Body] Product newProduct);
 
-        [Put("/products/{id}")]
+        [Put("/product-edit/{id}")]
         public Task<Product> UpdateProduct(int id, [Body] Product updatedProduct);
 
 
