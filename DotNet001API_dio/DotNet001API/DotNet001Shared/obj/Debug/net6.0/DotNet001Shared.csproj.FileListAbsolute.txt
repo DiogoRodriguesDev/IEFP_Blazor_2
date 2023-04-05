@@ -1,0 +1,24 @@
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\bin\Debug\net6.0\DotNet001Shared.deps.json
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\bin\Debug\net6.0\DotNet001Shared.dll
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\bin\Debug\net6.0\DotNet001Shared.pdb
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.csproj.AssemblyReference.cache
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.AssemblyInfoInputs.cache
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.AssemblyInfo.cs
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.csproj.CoreCompileInputs.cache
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.dll
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\refint\DotNet001Shared.dll
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.pdb
+C:\Users\António\source\repos\DotNet001API\DotNet001Shared\obj\Debug\net6.0\ref\DotNet001Shared.dll
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\bin\Debug\net6.0\DotNet001Shared.deps.json
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\bin\Debug\net6.0\DotNet001Shared.dll
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\bin\Debug\net6.0\DotNet001Shared.pdb
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.csproj.AssemblyReference.cache
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.AssemblyInfoInputs.cache
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.AssemblyInfo.cs
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.csproj.CoreCompileInputs.cache
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.dll
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\refint\DotNet001Shared.dll
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\DotNet001Shared.pdb
+C:\Users\DiogoRodrigues\Desktop\DotNet001API (2)\DotNet001API\DotNet001Shared\obj\Debug\net6.0\ref\DotNet001Shared.dll

@@ -1,0 +1,72 @@
+﻿@*@page "/Produtos"
+@using DotNet001Shared;
+@using DotNet001Shared.Models;
+@using Interfaces;
+@using System.Diagnostics;
+@inject IWebServiceAPI WebServiceAPI
+
+@if (ProductsData is not null && ProductsData.Any())
+{
+    foreach (var product in ProductsData)
+    {
+        <p>@product.Name</p>
+    }
+}
+<h2>Criar novo produto</h2>
+
+<EditForm Model="@NewProduct" OnValidSubmit="CreateNewProduct">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Nome:</label>
+        <InputText id="name" class="form-control" @bind-Value="@NewProduct.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="price">Preço:</label>
+        <InputNumber id="price" class="form-control" @bind-Value="@NewProduct.Price" step="0.01" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Descrição:</label>
+        <InputTextArea id="description" class="form-control" @bind-Value="@NewProduct.Description" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Criar</button>
+</EditForm>
+
+@code {
+    List<Product> ProductsData { get; set; } = new();
+    Product NewProduct { get; set; } = new Product();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var response = await WebServiceAPI.GetProducts();
+            ProductsData = response;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
+    }
+    private async Task CreateNewProduct()
+    {
+        try
+        {
+            var response = await WebServiceAPI.CreateProduct(NewProduct);
+            ProductsData.Add(response);
+            NewProduct = new Product();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
+    }
+}
+
+*@

@@ -1,0 +1,69 @@
+﻿@page "/EditarProduto/{id:int}"
+@using DotNet001Shared;
+@using DotNet001Shared.Models;
+@using Interfaces;
+@using System.Diagnostics;
+@inject IWebServiceAPI WebServiceAPI
+@inject NavigationManager NavigationManager
+
+<h2>Editar Produto</h2>
+
+@if (ProductData is not null)
+{
+    <EditForm Model="@ProductData" OnValidSubmit="UpdateProduct">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <InputText id="name" class="form-control" @bind-Value="@ProductData.Name" />
+        </div>
+
+        <div class="form-group">
+            <label for="price">Preço:</label>
+            <InputNumber id="price" class="form-control" @bind-Value="@ProductData.Price" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Descrição:</label>
+            <InputTextArea id="description" class="form-control" @bind-Value="@ProductData.Description" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    Product ProductData { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ProductData = await WebServiceAPI.GetProduct(Id);
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            Console.WriteLine($"Erro na chamada da API: {ex.Message}");
+            throw;
+        }
+    }
+
+    private async Task UpdateProduct()
+    {
+        try
+        {
+            await WebServiceAPI.UpdateProduct(Id, ProductData);
+            NavigationManager.NavigateTo("/Produtos");
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
+    }
+}
