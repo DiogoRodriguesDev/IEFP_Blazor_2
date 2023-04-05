@@ -27,12 +27,12 @@ namespace DotNet001API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("products/{id}")]
+        [HttpGet("product-details/{id}")]
         public async Task<IActionResult> GetProduct(int id)
         {
             var result = await Mediator.Send(new GetProductQuery(new Models.ProductRequest
             {
-                 Id = id
+                Id = id
             }));
             return Ok(result);
         }

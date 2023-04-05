@@ -9,7 +9,7 @@ namespace DotNet001BlazorWebApplication.Interfaces
         [Get("/products")]
         public Task<List<Product>> GetProducts();
 
-        [Get("/products/{id}")]
+        [Get("/product-details/{id}")]
         public Task<Product> GetProduct(int id);
 
         [Post("/products")]
