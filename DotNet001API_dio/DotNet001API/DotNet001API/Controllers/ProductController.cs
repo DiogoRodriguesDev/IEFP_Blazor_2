@@ -47,7 +47,7 @@ namespace DotNet001API.Controllers
         //    return Ok(result);
         //}
         [HttpPost("products")]
-        public async Task<IActionResult> AddProduct([FromBody] Product product)
+        public async Task<IActionResult> AddProduct([FromBody]  Product product)
         {
             var result = await Mediator.Send(new AddProductCommand(product));
             return Ok(result);
@@ -62,9 +62,9 @@ namespace DotNet001API.Controllers
         [HttpPut("product-edit/{id}")]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product, int id)
         {
-            await Mediator.Send(new UpdateProductCommand(product, id));
-
-            return Ok();
+            var result = await Mediator.Send(new UpdateProductCommand(product, id));
+            
+            return Ok(result);
         }
 
     }

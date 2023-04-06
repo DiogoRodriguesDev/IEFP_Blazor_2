@@ -7,7 +7,7 @@ namespace DotNet001API.Handlers
     {
         public ProductsMappingProfile()
         {
-            CreateMap<DotNet001API.Models.Product, DotNet001Shared.Models.Product>()
+            CreateMap<DotNet001API.Models.Product, DotNet001API.Models.Product >()
                 .ForMember(dest => dest.Id, dest => dest.MapFrom(src => src.Id))
                 .ForMember(dest => dest.Name, dest => dest.MapFrom(src => src.Name))
                 .ForMember(dest => dest.Description, dest => dest.MapFrom(src => src.Description))

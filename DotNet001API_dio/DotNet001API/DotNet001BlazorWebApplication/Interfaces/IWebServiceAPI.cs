@@ -1,6 +1,7 @@
 ﻿using DotNet001Shared;
-using DotNet001Shared.Models;
+using DotNet001API.Models;
 using Refit;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet001BlazorWebApplication.Interfaces
 {
@@ -16,7 +17,7 @@ namespace DotNet001BlazorWebApplication.Interfaces
         public Task<Product> CreateProduct([Body] Product newProduct);
 
         [Put("/product-edit/{id}")]
-        public Task<Product> UpdateProduct(int id, [Body] Product updatedProduct);
+        public Task<Product> UpdateProduct([FromBody] Product updatedProduct, int id);
 
 
         [Delete("/products/{id}")]
