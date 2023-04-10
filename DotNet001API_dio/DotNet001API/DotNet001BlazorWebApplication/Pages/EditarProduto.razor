@@ -1,6 +1,5 @@
 ﻿@page "/EditarProduto/{id:int}"
 @using DotNet001Shared;
-@*@using DotNet001Shared.Models;*@
 @using DotNet001API.Models;
 @using Interfaces;
 @using System.Diagnostics;
@@ -21,6 +20,11 @@
         </div>
 
         <div class="form-group">
+            <label for="category">Categoria:</label>
+            <InputText id="category" class="form-control" @bind-Value="@ProductData.Category" />
+        </div>
+
+        <div class="form-group">
             <label for="price">Preço:</label>
             <InputNumber id="price" class="form-control" @bind-Value="@ProductData.Price" step="0.01" />
         </div>
@@ -32,6 +36,14 @@
 
         <button type="submit" class="btn btn-primary">Atualizar</button>
     </EditForm>
+
+    @if (showAlert)
+    {
+        <div class="alert alert-primary" role="alert">
+            Produto atualizado com sucesso!
+        </div>
+        showAlert = false;
+    }
 }
 
 @code {
@@ -39,6 +51,8 @@
     public int Id { get; set; }
 
     Product ProductData { get; set; } = new();
+
+    bool showAlert = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -54,28 +68,12 @@
         }
     }
 
-    //private async Task UpdateProduct()
-    //{
-    //    try
-    //    {
-    //        await WebServiceAPI.UpdateProduct(Id, ProductData);
-    //        NavigationManager.NavigateTo("/Produtos");
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        Debug.WriteLine(ex);
-    //        throw;
-    //    }
-    //}
-
-
     public async void UpdateProduct()
     {
         try
         {
             var newProduct = new Product
                 {
-                    //Id = ProductData.Id,
                     Name = ProductData.Name,
                     Description = ProductData.Description,
                     Category = ProductData.Category,
@@ -84,8 +82,12 @@
                 };
 
             var response = await WebServiceAPI.UpdateProduct(newProduct, Id);
-            
 
+            if (response is not null)
+            {
+                showAlert = true;
+                StateHasChanged();
+            }
         }
         catch (Exception ex)
         {
@@ -93,5 +95,4 @@
             throw;
         }
     }
-
 }
