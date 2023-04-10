@@ -1,6 +1,7 @@
 ﻿@page "/EditarProduto/{id:int}"
 @using DotNet001Shared;
-@using DotNet001Shared.Models;
+@*@using DotNet001Shared.Models;*@
+@using DotNet001API.Models;
 @using Interfaces;
 @using System.Diagnostics;
 @inject IWebServiceAPI WebServiceAPI
@@ -37,7 +38,7 @@
     [Parameter]
     public int Id { get; set; }
 
-    Product ProductData { get; set; }
+    Product ProductData { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -53,12 +54,38 @@
         }
     }
 
-    private async Task UpdateProduct()
+    //private async Task UpdateProduct()
+    //{
+    //    try
+    //    {
+    //        await WebServiceAPI.UpdateProduct(Id, ProductData);
+    //        NavigationManager.NavigateTo("/Produtos");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Debug.WriteLine(ex);
+    //        throw;
+    //    }
+    //}
+
+
+    public async void UpdateProduct()
     {
         try
         {
-            await WebServiceAPI.UpdateProduct(Id, ProductData);
-            NavigationManager.NavigateTo("/Produtos");
+            var newProduct = new Product
+                {
+                    //Id = ProductData.Id,
+                    Name = ProductData.Name,
+                    Description = ProductData.Description,
+                    Category = ProductData.Category,
+                    Price = ProductData.Price,
+                    IsDeleted = ProductData.IsDeleted
+                };
+
+            var response = await WebServiceAPI.UpdateProduct(newProduct, Id);
+            
+
         }
         catch (Exception ex)
         {
@@ -66,4 +93,5 @@
             throw;
         }
     }
+
 }
