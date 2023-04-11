@@ -27,8 +27,9 @@ namespace DotNet001API.Handlers
                product.Price = request.Product.Price;
 
                 await _dataContext.SaveChangesAsync(cancellationToken);
-                return product;
+                
             }
+            return product;
         }
     }
 }

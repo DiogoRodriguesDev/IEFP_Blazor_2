@@ -1,9 +1,71 @@
 ﻿@page "/"
+@using DotNet001Shared;
+@using DotNet001API.Models;
+@using Interfaces;
+@using System.Diagnostics;
+@inject IWebServiceAPI WebServiceAPI
+@inject NavigationManager NavigationManager
 
-<PageTitle>Index</PageTitle>
+<h2>Lista de Produtos</h2>
 
-<h1>Hello, world!</h1>
+@if (Products is not null && Products.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Products)
+            {
+                <tr>
+                    <td style="padding: 20px;">@product.Name</td>
+                    <td style="padding: 20px;">@product.Category</td>
+                    <td style="padding: 20px;">@product.Price €</td>
+                    <td style="padding: 20px;">@product.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
-Welcome to your new app.
+@code {
+    List<Product> Products { get; set; } = new();
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var response = await WebServiceAPI.GetProducts();
+            Products = response.Where(p => !p.IsDeleted).ToList();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
+    }
+
+    private async Task DeleteProduct(int id)
+    {
+        try
+        {
+            await WebServiceAPI.DeleteProduct(id);
+            Products.RemoveAll(p => p.Id == id);
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
+    }
+    private void EditProduct(int id)
+    {
+        NavigationManager.NavigateTo($"/EditarProduto/{id}");
+    }
+}

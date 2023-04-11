@@ -2,8 +2,7 @@
 using DotNet001API.Models;
 using DotNet001API.Queries;
 using MediatR;
-using DotNet001Shared.Models;
-using Product = DotNet001Shared.Models.Product;
+//using Product = DotNet001Shared.Models.Product;
 using AutoMapper;
 
 namespace DotNet001API.Handlers
