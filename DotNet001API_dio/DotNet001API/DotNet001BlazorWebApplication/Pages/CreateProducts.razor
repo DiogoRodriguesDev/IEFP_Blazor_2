@@ -1,35 +1,10 @@
-﻿@page "/Produtos"
+﻿@page "/CriarProdutos"
 @using DotNet001Shared;
-@*@using DotNet001Shared.Models;*@
 @using DotNet001API.Models;
 @using Interfaces;
 @using System.Diagnostics;
 @inject IWebServiceAPI WebServiceAPI
 @inject NavigationManager NavigationManager
-
-@if (ProductsData is not null && ProductsData.Any())
-{
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var product in ProductsData)
-            {
-                <tr>
-                    <td>@product.Name</td>
-                    <td>
-                        <button class="btn btn-danger" @onclick="() => DeleteProduct(product.Id)">Deletar</button>
-                        <button class="btn btn-primary" @onclick="() => EditProduct(product.Id)">Editar</button>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
 
 <h2>Criar novo produto</h2>
 
@@ -40,6 +15,11 @@
     <div class="form-group">
         <label for="name">Nome:</label>
         <InputText id="name" class="form-control" @bind-Value="@NewProduct.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="category">Categoria:</label>
+        <InputText id="category" class="form-control" @bind-Value="@NewProduct.Category" />
     </div>
 
     <div class="form-group">
@@ -54,6 +34,44 @@
 
     <button type="submit" class="btn btn-primary">Criar</button>
 </EditForm>
+
+<hr>
+
+<h2>Produtos</h2>
+
+@if (ProductsData is not null && ProductsData.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in ProductsData)
+            {
+                <tr>
+                    <td style="padding: 20px;">@product.Name</td>
+                    <td style="padding: 20px;">@product.Category</td>
+                    <td style="padding: 20px;">@product.Price €</td>
+                    <td style="padding: 20px;">@product.Description</td>
+                    <td>
+                        <button class="btn btn-danger" @onclick="() => DeleteProduct(product.Id)">Deletar</button>
+                        <button class="btn btn-primary" @onclick="() => EditProduct(product.Id)">Editar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+
 
 @code {
     List<Product> ProductsData { get; set; } = new();

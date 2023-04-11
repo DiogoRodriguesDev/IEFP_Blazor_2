@@ -21,36 +21,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/CreateProducts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUHJvZHVjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/EditarProduto.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGFyUHJvZHV0by5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/PAGINA_RENOMEADA.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUEFHSU5BX1JFTk9NRUFEQS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/Products.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/Product_saved_2.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9zYXZlZF8yLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Pages/PRODUTOS_SAVED_PAGE.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUFJPRFVUT1NfU0FWRURfUEFHRS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DiogoRodrigues/Desktop/IEFP/git_Repositorio/IEFP_Blazor_2/DotNet001API_dio/DotNet001API/DotNet001BlazorWebApplication/Shared/SurveyPrompt.razor]

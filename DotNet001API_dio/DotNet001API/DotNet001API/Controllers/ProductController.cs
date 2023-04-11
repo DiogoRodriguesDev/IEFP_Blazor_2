@@ -66,6 +66,5 @@ namespace DotNet001API.Controllers
             
             return Ok(result);
         }
-
     }
 }
